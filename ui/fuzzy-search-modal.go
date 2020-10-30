@@ -58,8 +58,8 @@ func NewFuzzySearchModal(mainView *MainView, width int, height int) *FuzzySearch
 	fs.results = mauview.NewTextView().SetRegions(true)
 	fs.search = mauview.NewInputArea().
 		SetChangedFunc(fs.changeHandler).
-		SetTextColor(tcell.ColorWhite).
-		SetBackgroundColor(tcell.ColorDarkCyan)
+		SetTextColor(tcell.ColorDefault).
+		SetBackgroundColor(tcell.ColorDefault)
 	fs.search.Focus()
 
 	flex := mauview.NewFlex().
@@ -69,7 +69,7 @@ func NewFuzzySearchModal(mainView *MainView, width int, height int) *FuzzySearch
 
 	fs.container = mauview.NewBox(flex).
 		SetBorder(true).
-		SetTitle("Quick Room Switcher").
+		SetTitle("").
 		SetBlurCaptureFunc(func() bool {
 			fs.parent.HideModal()
 			return true

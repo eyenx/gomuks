@@ -76,7 +76,7 @@ func (ui *GomuksUI) NewMainView() mauview.Component {
 	mainView.cmdProcessor = NewCommandProcessor(mainView)
 
 	mainView.flex.
-		AddFixedComponent(mainView.roomList, 25).
+		AddFixedComponent(mainView.roomList, 15).
 		AddFixedComponent(widget.NewBorder(), 1).
 		AddProportionalComponent(mainView.roomView, 1)
 	mainView.BumpFocus(nil)

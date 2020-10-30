@@ -331,7 +331,7 @@ func (msg *UIMessage) Draw(screen mauview.Screen) {
 				mainc, combc, style, _ := screen.GetContent(x, y)
 				_, bg, _ := style.Decompose()
 				if bg == tcell.ColorDefault {
-					screen.SetContent(x, y, mainc, combc, style.Background(tcell.ColorDarkGreen))
+					screen.SetContent(x, y, mainc, combc, style.Background(tcell.ColorDefault))
 				}
 			}
 		}

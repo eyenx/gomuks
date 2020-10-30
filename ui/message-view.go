@@ -80,7 +80,7 @@ func NewMessageView(parent *RoomView) *MessageView {
 		parent: parent,
 		config: parent.config,
 
-		MaxSenderWidth: 15,
+		MaxSenderWidth: 10,
 		TimestampWidth: len(messages.TimeFormat),
 		ScrollOffset:   0,
 

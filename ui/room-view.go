@@ -130,10 +130,10 @@ func NewRoomView(parent *MainView, room *rooms.Room) *RoomView {
 	}
 
 	view.topic.
-		SetTextColor(tcell.ColorWhite).
-		SetBackgroundColor(tcell.ColorDarkGreen)
+		SetTextColor(tcell.ColorBlack).
+		SetBackgroundColor(tcell.ColorYellow)
 
-	view.status.SetBackgroundColor(tcell.ColorDimGray)
+	view.status.SetBackgroundColor(tcell.ColorDefault).SetTextColor(tcell.ColorYellow)
 
 	return view
 }
@@ -271,7 +271,7 @@ func (view *RoomView) GetStatus() string {
 // Constants defining the size of the room view grid.
 const (
 	UserListBorderWidth   = 1
-	UserListWidth         = 20
+	UserListWidth         = 10
 	StaticHorizontalSpace = UserListBorderWidth + UserListWidth
 
 	TopicBarHeight  = 1
