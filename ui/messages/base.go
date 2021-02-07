@@ -312,7 +312,7 @@ func (msg *UIMessage) DrawReactions(screen mauview.Screen) {
 
 	x := 0
 	for _, reaction := range msg.Reactions {
-		_, drawn := mauview.PrintWithStyle(screen, reaction.String(), x, 0, width-x, mauview.AlignLeft, tcell.StyleDefault.Foreground(mauview.Styles.PrimaryTextColor).Background(tcell.ColorDarkGreen))
+		_, drawn := mauview.PrintWithStyle(screen, reaction.String(), x, 0, width-x, mauview.AlignLeft, tcell.StyleDefault.Foreground(tcell.ColorBlack).Background(tcell.ColorDarkGreen))
 		x += drawn + 1
 		if x >= width {
 			break
@@ -331,7 +331,7 @@ func (msg *UIMessage) Draw(screen mauview.Screen) {
 				mainc, combc, style, _ := screen.GetContent(x, y)
 				_, bg, _ := style.Decompose()
 				if bg == tcell.ColorDefault {
-					screen.SetContent(x, y, mainc, combc, style.Background(tcell.ColorDefault))
+					screen.SetContent(x, y, mainc, combc, style.Background(tcell.ColorYellow).Foreground(tcell.ColorBlack))
 				}
 			}
 		}
